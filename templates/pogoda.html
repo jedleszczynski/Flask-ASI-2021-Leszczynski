@@ -1,0 +1,31 @@
+<html>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- Wiecej o bootrapie na w3c school -->
+<!-- Aby bootstrap w podstawowej formie dzialal musicie miec: DIV ID ROW, w srodku ktorego macie
+DIV ID col-sm-X gdzie x to szerokosc gdzie 12 to 100% strony (mozna podzielic strone na 12 rownych czesci robiac col-sm-1 albo na 2 czesci robiac col-sm-6) -->
+
+<body>
+  
+  <div id="pogoda">
+      <div class="container">
+          <div class="row">
+            <div id="weathertype">Weather: {{ weathertype }} </div>
+            <div class="col-sm-2">
+                    <img src="/static/temp.png" class="weatherimg" id="tempimg">
+                    <div id="temp">{{ temp }} Degrees Celcius</div>
+            </div>
+            <div class="col-sm-2">
+                    <img src="/static/humid.png" class="weatherimg" id="humidimg">
+                    <div id="humid">Humidity: {{ humid }} </div>
+            </div>
+            <div class="col-sm-2">
+                    <img src="/static/rain.png" class="weatherimg" id="rainimg">
+                    <div id="rain"> {{ rain }}</div>
+            </div>
+          </div>
+      </div>
+  </div>
+</body>
+
+</html>

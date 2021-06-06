@@ -1,0 +1,22 @@
+<html>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+<body>
+<table id="gradestable">
+  <tr class="tableheader">
+    <td> Student Id </td>
+    <td> Grade </td>
+    <td> Date </td>
+  </tr>
+{% for item in grades %}
+ <TR class="graderow">
+   <TD class="c1">{{item.student_id}}</TD>
+   <TD class="c2">{{item.grade}}</TD>
+   <TD class="c3">{{item.grade_date}}</TD>
+</TR>
+
+{% endfor %}
+</table>
+</body>
+
+</html>
