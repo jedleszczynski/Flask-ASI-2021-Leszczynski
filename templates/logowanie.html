@@ -6,10 +6,11 @@ You're logged in already!
 
 {% else %}
 
-<form action="/login" method="POST">
+<form action="/zaloguj" method="POST">
 <div class="login">
       <div class="login-screen">
             <div class="app-title">
+                  <h1>Flask-ASI-2021</h1>
                   <h1>Login</h1>
             </div>
             <div class="login-form">
@@ -32,7 +33,17 @@ You're logged in already!
                           {% endwith %}
                   <input type="submit" value="Log in" class="btn btn-primary btn-large btn-block">
                   <p id = "signupparagraph">
+                  <a href="/login">
+                    <img alt="Login with Google" src="./static/btn_google_signin_light_pressed_web@2x.png"
+                    width ="246px" height="59">
+                  </a>  
+                  <br>
                  You don't have an account? <a href="/signup"> Signup </a>
+                 <br>
+                 <br>
+                 <a style="floa:left" href="/terms"> Terms of use</a>
+                 <br>
+                 <a style="clear:both; floatrigth" href="/privacy"> Privacy </a>
                  </p>
             </div>
       </div>
