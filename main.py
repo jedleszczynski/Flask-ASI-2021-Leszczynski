@@ -125,6 +125,14 @@ def grades():
 def testhash(test):
   return hash_string_sha(test)
 
+@app.route('/terms', methods = ['GET', 'POST'])
+def terms(test):
+  return redirect("https://replit.com/site/terms", code=302)
+
+@app.route('/privacy', methods = ['GET', 'POST'])
+def privacy(test):
+  return redirect("https://replit.com/site/privacy", code=302)  
+
 if __name__ == "__main__":
   app.run(
     host='0.0.0.0', 
