@@ -69,14 +69,18 @@ def load_user(user_id):
 @app.route("/")
 def index():
     if current_user.is_authenticated:
-        return (
-            "<p>Hello, {}! You're logged in! Email: {}</p>"
-            "<div><p>Google Profile Picture:</p>"
-            '<img src="{}" alt="Google profile pic"></img></div>'
-            '<a class="button" href="/logout">Logout</a>'.format(
-                current_user.name, current_user.email, current_user.profile_pic
-            )
-        )
+        name = current_user.name
+        email = current_user.email
+        pic = current_user.profile_pic
+        return render_template('frontpage.html', name = name, pic = pic, email = email  )
+        #(
+        #    "<p>Hello, {}! You're logged in! Email: {}</p>"
+        #    "<div><p>Google Profile Picture:</p>"
+        #    '<img src="{}" alt="Google profile pic"></img></div>'
+        #    '<a class="button" href="/logout">Logout</a>'.format(
+        #        current_user.name, current_user.email, current_user.profile_pic
+        #    )
+        #)
     else:
         return render_template('logowanie.html')
 # google    
@@ -199,7 +203,8 @@ def zaloguj_uzytkownika():
 @app.route('/wyloguj')
 def wyloguj():
   session['logged_in'] = False
-  return "Wylogowano" 
+  logout_user()
+  return redirect(url_for("index"))    
 
 @app.route('/register', methods=['POST', 'GET'])
 def do_register():
@@ -220,7 +225,7 @@ def return_registrationpage():
 
 @app.route("/pogoda")
 def pokazpogode():
-  temp,humid,weathertype,rain, pressure = pobierzpogode()
+  temp,humid,weathertype,rain,pressure = pobierzpogode()
   timestamp = datetime.datetime.now()
   return render_template("pogoda.html", temp=temp, humid=humid,weathertype=weathertype, rain=rain, timestamp = timestamp, pressure=pressure)
 

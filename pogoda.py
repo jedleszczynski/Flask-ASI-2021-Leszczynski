@@ -25,7 +25,7 @@ def zwroc_elementy_pogody(wynik_pogody):
   humid = json_pogody["main"]["humidity"]
   pressure = json_pogody["main"]["pressure"]
   weathertype = json_pogody["weather"][0]["main"]
-  rain = "Deszcz" if weathertype=="rain" else "Brak"
+  rain = "Opady" if weathertype=="rain" else "Brak"
   return temp_c, humid, weathertype, rain, pressure
 
 

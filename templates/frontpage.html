@@ -13,8 +13,21 @@
 <body bgcolor=#fff>
   <br><br>
   <center>
-   <img src="/static/cutsie.gif" id="cutsie.gif"> 
-
+     Witaj {{name}} :) Jesteś zaglogowany!
+     <br>
+     Email: {{email}}
+     <br>
+     Pic: <img src="{{pic}}">
+      <br>
+    (Imie, mail i obrazek widoczne dla Google login)
+      <br>
+  
+   <div>
+      <a href='/pogoda'>
+          <input type="submit" value="Zobacz pogodę" class="btn btn-primary btn-large btn-block">
+      </a>
+  </div>
+ <img src="/static/cutsie.gif" id="cutsie.gif">
  <div id="logout">
       <a href='/wyloguj'>
           <input type="submit" value="Log Out" class="btn btn-primary btn-large btn-block">
