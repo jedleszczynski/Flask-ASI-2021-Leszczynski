@@ -1,10 +1,16 @@
 import requests
 import json
-
-
+import os
+COLLEGIUM_ALTUM_LAT=52.40482616077729
+COLLEGIUM_ALTUM_LON=16.921709180476395
+OPEN_WEATHER_API_KEY=os.environ['OPEN_WEATHER_API_KEY']
 
 def pobierzpogode():
-  r = requests.get('http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a1')
+  url = 'http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&appid={2}'.format(
+  COLLEGIUM_ALTUM_LAT,
+  COLLEGIUM_ALTUM_LON,
+  OPEN_WEATHER_API_KEY)
+  r = requests.get(url)
   loc_weather = r.content.strip()
 
   temp,humid,weathertype,rain = zwroc_elementy_pogody(loc_weather)

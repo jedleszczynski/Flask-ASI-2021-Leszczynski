@@ -1,31 +1,92 @@
+<!doctype html>
 <html>
-<link rel="stylesheet" href="/static/style.css" type="text/css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<!-- Wiecej o bootrapie na w3c school -->
-<!-- Aby bootstrap w podstawowej formie dzialal musicie miec: DIV ID ROW, w srodku ktorego macie
-DIV ID col-sm-X gdzie x to szerokosc gdzie 12 to 100% strony (mozna podzielic strone na 12 rownych czesci robiac col-sm-1 albo na 2 czesci robiac col-sm-6) -->
+    <head>
+        <!-- Bootstrap CSS --> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        
+        <!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" -->        
+        >
+    </head>
+    <body>
+        <div class="container">
+            <h1>Pogoda na czubku Collegium Altum UEPu
+</h1>
+    
+    
 
-<body>
-  
-  <div id="pogoda">
+    <!-- NAVIGATION ROW -->
+    <div class="row">
+    <div class="col-12"> 
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h7 class="my-0 mr-md-auto font-weight-normal">Jędrzej Leszczyński, UEP, Studia II Stopnia, Niestacjonarne, Informatyka i Ekonometria</h7>
+        
+    </div>
+    <div>
+   <!-- ENDOF NAVIGATION ROW -->
+
+    
+    <div class="row">
+    <div class="col-12">
+
+
+    <!-- PRICING HEADER P -->
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Pogoda OpenWeather API</h1>
+      <p class="lead">Timestamp: {{timestamp}}</p>
+    </div>
+    <!-- ENDOF PRICING HEADER P -->
+
       <div class="container">
-          <div class="row">
-            <div id="weathertype">Weather: {{ weathertype }} </div>
-            <div class="col-sm-2">
-                    <img src="/static/temp.png" class="weatherimg" id="tempimg">
-                    <div id="temp">{{ temp }} Degrees Celcius</div>
+        <div class="card-deck mb-3 text-center">
+          <div class="card mb-4 box-shadow">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Free</h4>
             </div>
-            <div class="col-sm-2">
-                    <img src="/static/humid.png" class="weatherimg" id="humidimg">
-                    <div id="humid">Humidity: {{ humid }} </div>
-            </div>
-            <div class="col-sm-2">
-                    <img src="/static/rain.png" class="weatherimg" id="rainimg">
-                    <div id="rain"> {{ rain }}</div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>10 users included</li>
+                <li>2 GB of storage</li>
+                <li>Email support</li>
+                <li>Help center access</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
             </div>
           </div>
-      </div>
-  </div>
-</body>
+          <div class="card mb-4 box-shadow">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Pro</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>20 users included</li>
+                <li>10 GB of storage</li>
+                <li>Priority email support</li>
+                <li>Help center access</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+            </div>
+          </div>
+          <div class="card mb-4 box-shadow">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Enterprise</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>30 users included</li>
+                <li>15 GB of storage</li>
+                <li>Phone and email support</li>
+                <li>Help center access</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+            </div>
+          </div>
+        </div>
 
+                </div>    
+            </div>    
+        </div>
+    </body>
 </html>
