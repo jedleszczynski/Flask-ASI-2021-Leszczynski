@@ -7,7 +7,8 @@ import random
 import datetime
 
 from sqlalchemy.orm import sessionmaker
-from register import User, Grade, return_sqlalchemysession
+from register import User as U
+from register import Grade, return_sqlalchemysession
 from passhasher import hash_string_sha
 from pogoda import pobierzpogode
 
@@ -77,8 +78,7 @@ def index():
             )
         )
     else:
-        return '<a class="button" href="/login">Google Login</a>'
-
+        return render_template('logowanie.html')
 # google    
 @app.route("/login")
 def login():
@@ -174,7 +174,7 @@ def zaloguj_uzytkownika():
 
     # Zadaj zapytanie w sposob bezpieczny
     # od sqlinjection
-    query = sqlsession.query(User).filter(User.username.in_([POST_USERNAME]))
+    query = sqlsession.query(U).filter(U.username.in_([POST_USERNAME]))
 
     #wez 1 uzytkownika z takim nickiem (zakladamy ze nie ma powtorek)
     user = query.first()
@@ -207,7 +207,7 @@ def do_register():
   POST_PASSWORD = str(request.form['password'])
   
   sqlsession = return_sqlalchemysession()
-  user = User(POST_USERNAME,POST_PASSWORD)
+  user = U(POST_USERNAME,POST_PASSWORD)
 
   sqlsession.add(user)
   sqlsession.commit()
