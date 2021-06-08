@@ -7,16 +7,16 @@
         <!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" -->        
         >
     </head>
-    <body>
+    <body style="background-color:#4F7942;">
         <div class="container">
-            <h1>Pogoda na czubku Collegium Altum UEPu
+            <h1>Pogoda na dachu Collegium Altum UEP
 </h1>
     
     
 
     <!-- NAVIGATION ROW -->
     <div class="row">
-    <div class="col-12"> 
+    <div class="col-12" > 
       <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
         <h7 class="my-0 mr-md-auto font-weight-normal">Jędrzej Leszczyński, UEP, Studia II Stopnia, Niestacjonarne, Informatyka i Ekonometria</h7>
         
@@ -26,13 +26,13 @@
 
     
     <div class="row">
-    <div class="col-12">
+    <div class="col-12" >
 
 
     <!-- PRICING HEADER P -->
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <h1 class="display-4">Pogoda OpenWeather API</h1>
-      <p class="lead">Timestamp: {{timestamp}}</p>
+      <p class="lead">Timestamp: {{timestamp}} Lat: 52.40482616077729 Lon: 16.921709180476395 </p>
     </div>
     <!-- ENDOF PRICING HEADER P -->
 
@@ -40,47 +40,38 @@
         <div class="card-deck mb-3 text-center">
           <div class="card mb-4 box-shadow">
             <div class="card-header">
-              <h4 class="my-0 font-weight-normal">Free</h4>
+              <h4 class="my-0 font-weight-normal">Temperatura</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>10 users included</li>
-                <li>2 GB of storage</li>
-                <li>Email support</li>
-                <li>Help center access</li>
-              </ul>
-              <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+              <h1 class="card-title pricing-card-title">{{ temp }} <small class="text-muted"> °C</small></h1>
+              <img class="img-fluid" src="./static/thermometer.svg">
             </div>
           </div>
           <div class="card mb-4 box-shadow">
             <div class="card-header">
-              <h4 class="my-0 font-weight-normal">Pro</h4>
+              <h4 class="my-0 font-weight-normal">Wilgotność</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>20 users included</li>
-                <li>10 GB of storage</li>
-                <li>Priority email support</li>
-                <li>Help center access</li>
-              </ul>
-              <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+              <h1 class="card-title pricing-card-title">{{ humid }} <small class="text-muted">%</small></h1>
+              <img class="img-fluid" src="./static/humidity.svg">
             </div>
           </div>
           <div class="card mb-4 box-shadow">
             <div class="card-header">
-              <h4 class="my-0 font-weight-normal">Enterprise</h4>
+              <h4 class="my-0 font-weight-normal">Ciśnienie</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>30 users included</li>
-                <li>15 GB of storage</li>
-                <li>Phone and email support</li>
-                <li>Help center access</li>
-              </ul>
-              <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+              <h1 class="card-title pricing-card-title">{{ pressure }} <small class="text-muted">hPa</small></h1>
+              <img class="img-fluid" src="./static/pressure-gauge.svg">
+            </div>
+          </div>
+          <div class="card mb-4 box-shadow">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Deszcz</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">{{ rain }}<small class="text-muted"></small></h1>
+              <img class="img-fluid" src="./static/rain.svg">
             </div>
           </div>
         </div>

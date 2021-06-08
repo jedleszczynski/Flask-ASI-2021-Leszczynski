@@ -13,8 +13,8 @@ def pobierzpogode():
   r = requests.get(url)
   loc_weather = r.content.strip()
 
-  temp,humid,weathertype,rain = zwroc_elementy_pogody(loc_weather)
-  return temp, humid, weathertype, rain
+  temp,humid,weathertype,rain,pressure = zwroc_elementy_pogody(loc_weather)
+  return temp, humid, weathertype, rain, pressure
 
 
 
@@ -25,8 +25,8 @@ def zwroc_elementy_pogody(wynik_pogody):
   humid = json_pogody["main"]["humidity"]
   pressure = json_pogody["main"]["pressure"]
   weathertype = json_pogody["weather"][0]["main"]
-  rain = "Rain" if weathertype=="rain" else "no rain"
-  return temp_c, humid, weathertype, rain
+  rain = "Deszcz" if weathertype=="rain" else "Brak"
+  return temp_c, humid, weathertype, rain, pressure
 
 
 def konwertuj_do_c(k):

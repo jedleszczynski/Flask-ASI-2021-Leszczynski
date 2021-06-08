@@ -220,9 +220,9 @@ def return_registrationpage():
 
 @app.route("/pogoda")
 def pokazpogode():
-  temp,humid,weathertype,rain = pobierzpogode()
+  temp,humid,weathertype,rain, pressure = pobierzpogode()
   timestamp = datetime.datetime.now()
-  return render_template("pogoda.html", temp=temp, humid=humid,weathertype=weathertype, rain=rain, timestamp = timestamp)
+  return render_template("pogoda.html", temp=temp, humid=humid,weathertype=weathertype, rain=rain, timestamp = timestamp, pressure=pressure)
 
 # Propozycja dodatkowego zadania - bootstrap? 
 # Przyjrzyj sie temu jak dobrze wyglada ta strona w html
