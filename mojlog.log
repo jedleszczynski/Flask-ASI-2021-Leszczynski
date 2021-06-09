@@ -1,14 +1,41 @@
 
-2|0|2|1|-|0|6|-|0|9| |1|4|:|0|0|:|4|1|.|2|3|8|8|8|9| |I|N|F|O| |:| |I|n|f|o| |w|p|i|s| |d|o| |l|o|g|u
-2|0|2|1|-|0|6|-|0|9| |1|4|:|0|0|:|4|1|.|2|3|9|0|9|0| |W|A|R|N|I|N|G| |:| |W|a|r|n|i|n|g| |w|p|i|s| |d|o| |l|o|g|u
-2|0|2|1|-|0|6|-|0|9| |1|4|:|0|0|:|4|1|.|2|3|9|1|5|3| |C|R|I|T|I|C|A|L| |:| |C|r|i|t|i|c|a|l| |w|p|i|s| |d|o| |l|o|g|u
-2,0,2,1,-,0,6,-,0,9, ,1,4,:,0,1,:,2,6,.,7,4,3,7,8,5, ,I,N,F,O, ,:, ,I,n,f,o, ,w,p,i,s, ,d,o, ,l,o,g,u
-2,0,2,1,-,0,6,-,0,9, ,1,4,:,0,1,:,2,6,.,7,4,5,4,8,2, ,W,A,R,N,I,N,G, ,:, ,W,a,r,n,i,n,g, ,w,p,i,s, ,d,o, ,l,o,g,u
-2,0,2,1,-,0,6,-,0,9, ,1,4,:,0,1,:,2,6,.,7,4,5,7,6,4, ,C,R,I,T,I,C,A,L, ,:, ,C,r,i,t,i,c,a,l, ,w,p,i,s, ,d,o, ,l,o,g,u
-2|0|2|1|-|0|6|-|0|9| |1|4|:|0|2|:|0|0|.|6|6|3|3|4|7| |I|N|F|O| |:| |I|n|f|o| |w|p|i|s| |d|o| |l|o|g|u
-2|0|2|1|-|0|6|-|0|9| |1|4|:|0|2|:|0|0|.|6|6|3|8|5|1| |W|A|R|N|I|N|G| |:| |W|a|r|n|i|n|g| |w|p|i|s| |d|o| |l|o|g|u
-2|0|2|1|-|0|6|-|0|9| |1|4|:|0|2|:|0|0|.|6|6|3|9|8|0| |C|R|I|T|I|C|A|L| |:| |C|r|i|t|i|c|a|l| |w|p|i|s| |d|o| |l|o|g|u
-2 0 2 1 - 0 6 - 0 9 " " 1 4 : 0 3 : 3 3 . 0 6 5 4 4 4 " " I N F O " " : " " I n f o " " w p i s " " d o " " l o g u
-2 0 2 1 - 0 6 - 0 9 " " 1 4 : 0 3 : 3 3 . 0 6 5 9 4 3 " " W A R N I N G " " : " " W a r n i n g " " w p i s " " d o " " l o g u
-2 0 2 1 - 0 6 - 0 9 " " 1 4 : 0 3 : 3 3 . 0 6 6 3 4 6 " " C R I T I C A L " " : " " C r i t i c a l " " w p i s " " d o " " l o g u
-2021-06-09 14:06:31.188766 INFO : Info wpis do logu2021-06-09 14:06:31.189048 WARNING : Warning wpis do logu2021-06-09 14:06:31.189156 CRITICAL : Critical wpis do logu
+2021-06-09 16:50:59.901464 WARNING : Warning wpis do logu
+2021-06-09 16:50:59.901591 CRITICAL : Critical wpis do logu
+2021-06-09 16:51:02.226205 INFO : Info wpis do logu
+2021-06-09 16:51:02.226380 WARNING : Warning wpis do logu
+2021-06-09 16:51:02.226468 CRITICAL : Critical wpis do logu
+2021-06-09 17:35:24.147290 INFO : Zarejestrowano użytkownika: tomasz
+2021-06-09 17:51:23.101128 INFO : Zalogowano użytkownika klasycznie: admin
+2021-06-09 17:57:42.469486 INFO : Błędna próba logowania
+2021-06-09 17:59:56.570779 INFO : Błędna próba logowania
+2021-06-09 18:00:08.266981 INFO : Błędna próba logowania
+2021-06-09 18:02:11.704794 INFO : Błędna próba logowania 
+2021-06-09 18:02:36.748150 INFO : Redirect przy logowaniu OAuthGoogle...
+2021-06-09 18:02:42.092447 INFO : Zalogowano użytkownika poprzez OAuth: Jędrzej
+2021-06-09 18:02:59.976212 INFO : Redirect przy logowaniu OAuthGoogle...
+2021-06-09 18:03:03.933012 INFO : Zalogowano użytkownika poprzez OAuth: Jędrzej
+2021-06-09 18:05:28.351637 INFO : Błędna próba logowania 
+2021-06-09 18:11:51.910075 INFO : Zalogowano użytkownika klasycznie: admin
+2021-06-09 18:12:51.877664 INFO : Zalogowano użytkownika klasycznie: admin
+2021-06-09 18:14:28.610671 INFO : Zalogowano użytkownika klasycznie: admin
+2021-06-09 18:14:34.659252 INFO : Wylogowano użytkownika klasycznie
+2021-06-09 18:14:43.120202 INFO : Zalogowano użytkownika klasycznie: admin
+2021-06-09 18:15:40.486311 INFO : Zalogowano użytkownika klasycznie: admin
+2021-06-09 18:15:52.562330 INFO : Zalogowano użytkownika klasycznie: admin
+2021-06-09 18:15:58.909810 INFO : Zalogowano użytkownika klasycznie: admin
+2021-06-09 18:16:15.276367 INFO : Zalogowano użytkownika klasycznie: admin
+2021-06-09 18:17:10.789654 INFO : Zalogowano użytkownika klasycznie: admin
+2021-06-09 18:18:49.293836 INFO : Zalogowano użytkownika klasycznie: admin
+2021-06-09 18:18:57.062970 INFO : Wylogowano użytkownika klasycznie
+2021-06-09 18:19:03.690484 INFO : Zalogowano użytkownika klasycznie: tomasz
+2021-06-09 18:21:03.396934 INFO : Zalogowano użytkownika klasycznie: tomasz
+2021-06-09 18:21:44.783630 INFO : Zalogowano użytkownika klasycznie: tomasz
+2021-06-09 18:22:04.187930 INFO : Zalogowano użytkownika klasycznie: tomasz
+2021-06-09 18:28:29.709851 WARNING : Błędna próba logowania 
+2021-06-09 18:28:46.444375 WARNING : Błędna próba logowania zed
+2021-06-09 18:28:51.353440 WARNING : Błędna próba logowania zed
+2021-06-09 18:29:01.808006 INFO : Redirect przy logowaniu OAuthGoogle...
+2021-06-09 18:29:07.278519 INFO : Zalogowano użytkownika poprzez OAuth: Hazel
+2021-06-09 18:29:28.767354 INFO : Redirect przy logowaniu OAuthGoogle...
+2021-06-09 18:29:31.185395 INFO : Zalogowano użytkownika poprzez OAuth: Hazel
+2021-06-09 18:29:34.895082 INFO : Wylogowano użytkownika klasycznie

@@ -130,3 +130,7 @@ width: 50%;
   background-color:rgba(229, 231, 238, 0.082);
   color: black;
 }
+
+#woda{
+  background-image: url("static/waves.jpg");
+}

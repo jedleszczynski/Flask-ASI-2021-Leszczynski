@@ -98,6 +98,7 @@ def login():
         redirect_uri=request.base_url + "/callback",
         scope=["openid", "email", "profile"],
     )
+    wpisz_do_logu(datetime.datetime.now(),'INFO', 'Redirect przy logowaniu OAuthGoogle...')
     return redirect(request_uri)
 
 @app.route("/login/callback")
@@ -139,6 +140,7 @@ def callback():
         picture = userinfo_response.json()["picture"]
         users_name = userinfo_response.json()["given_name"]
     else:
+        wpisz_do_logu(datetime.datetime.now(),'WARNING', 'Błędna próba logowania OAuth Google przez'+userinfo_response.json()["email"])
         return "User email not available or not verified by Google.", 400
     # Create a user in your db with the information provided
     # by Google
@@ -149,16 +151,18 @@ def callback():
     # Doesn't exist? Add it to the database.
     if not User.get(unique_id):
         User.create(unique_id, users_name, users_email, picture)
-
+        wpisz_do_logu(datetime.datetime.now(),'INFO', 'Utworzono użytkownika poprzez OAuth: '+users_name)
     # Begin user session by logging the user in
     login_user(user)
-
+    wpisz_do_logu(datetime.datetime.now(),'INFO', 'Zalogowano użytkownika poprzez OAuth: '+users_name)
     # Send user back to homepage
     return redirect(url_for("index"))
 @app.route("/logout")
 @login_required
 def logout():
+    do_wylogowania = current_user.name
     logout_user()
+    wpisz_do_logu(datetime.datetime.now(),'INFO', 'Wylogowano użytkownika OAuth: '+do_wylogowania)
     return redirect(url_for("index"))    
 ###
 # default login and logut with sqlalchemy etc.
@@ -187,17 +191,21 @@ def zaloguj_uzytkownika():
       #Ta linia musi być w try, bo jeżeli nie ma usera (user==None) to nie zadziała user.check_password
       logged = user.check_password(POST_PASSWORD)
       # check_password zwraca True jak haslo sie zgadza
+      wpisz_do_logu(datetime.datetime.now(),'INFO', 'Zalogowano użytkownika klasycznie: '+ POST_USERNAME)
       if logged:
         session['logged_in'] = True
         
       else:
         # Jak działa flash: https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/
         flash('No user or wrong password provided')
+        wpisz_do_logu(datetime.datetime.now(),'WARNING', 'Błędna próba logowania: '+ POST_USERNAME)
         return render_template('logowanie.html')
     except AttributeError as e:
       flash('No user or wrong password provided')
       #traceback trick to printout the error despite the except
+      wpisz_do_logu(datetime.datetime.now(),'WARNING', 'Błędna próba logowania '+ POST_USERNAME)
       print(traceback.format_exc())
+      
     return home()
 
 
@@ -205,6 +213,7 @@ def zaloguj_uzytkownika():
 def wyloguj():
   session['logged_in'] = False
   logout_user()
+  wpisz_do_logu(datetime.datetime.now(),'INFO', 'Wylogowano użytkownika klasycznie')
   return redirect(url_for("index"))    
 
 @app.route('/register', methods=['POST', 'GET'])
@@ -217,6 +226,7 @@ def do_register():
 
   sqlsession.add(user)
   sqlsession.commit()
+  wpisz_do_logu(datetime.datetime.now(),'INFO', 'Zarejestrowano użytkownika: '+ POST_USERNAME )
   sqlsession.close()
   return home()
 
@@ -271,11 +281,11 @@ def testhash(test):
 
 @app.route('/terms', methods = ['GET', 'POST'])
 def terms():
-  return webbrowser.open_new_tab("https://replit.com/site/terms", code=302)
+  return redirect("https://replit.com/site/terms", code=302)
 
 @app.route('/privacy', methods = ['GET', 'POST'])
 def privacy():
-  return webbrowser.open_new_tab("https://replit.com/site/privacy", code=302)  
+  return redirect("https://replit.com/site/privacy", code=302)  
 
 ### LOGGING
 
