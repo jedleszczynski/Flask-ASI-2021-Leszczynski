@@ -39,3 +39,15 @@
 2021-06-09 18:29:28.767354 INFO : Redirect przy logowaniu OAuthGoogle...
 2021-06-09 18:29:31.185395 INFO : Zalogowano użytkownika poprzez OAuth: Hazel
 2021-06-09 18:29:34.895082 INFO : Wylogowano użytkownika klasycznie
+2021-06-09 18:58:11.768527 WARNING : Błędna próba logowania david
+2021-06-09 18:58:34.845169 INFO : Zarejestrowano użytkownika: david
+2021-06-09 18:58:39.460656 INFO : Zalogowano użytkownika klasycznie: david
+2021-06-09 18:58:39.460987 WARNING : Błędna próba logowania: david
+2021-06-09 18:58:44.489664 INFO : Zalogowano użytkownika klasycznie: david
+2021-06-09 18:59:25.705073 INFO : Zalogowano użytkownika klasycznie: david
+2021-06-09 19:04:23.880979 INFO : Redirect przy logowaniu OAuthGoogle...
+2021-06-09 19:06:21.584871 INFO : Zalogowano użytkownika poprzez OAuth: Hazel
+2021-06-09 19:06:46.046365 INFO : Wylogowano użytkownika klasycznie
+2021-06-09 19:06:49.870715 INFO : Redirect przy logowaniu OAuthGoogle...
+2021-06-09 19:06:54.666237 INFO : Zalogowano użytkownika poprzez OAuth: Jędrzej
+2021-06-09 19:10:11.280477 INFO : Zalogowano użytkownika klasycznie: admin
