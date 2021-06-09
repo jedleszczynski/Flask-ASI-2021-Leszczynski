@@ -1,7 +1,7 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 import bcrypt
 
-pepperstring = "ASI2019"
+pepperstring = "Flask-ASI-2021-Leszczynski"
 
 ## ABSOLUTNIE NIEBEZPIECZE METODY HASHOWANIA 
 # PATRZ NA @app.route('/hash/<string:test>' w pliku main.py

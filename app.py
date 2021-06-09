@@ -1,4 +1,5 @@
 from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
+from mojlogger import wpisz_do_logu
 import os
 import traceback
 import urllib.request
@@ -172,7 +173,7 @@ def home():
 def zaloguj_uzytkownika():
     POST_USERNAME = str(request.form['username'])
     POST_PASSWORD = str(request.form['password'])
-
+  
     #Stworz obiekt sesji SQLalchemy (ORM)
     sqlsession = return_sqlalchemysession()
 
@@ -276,7 +277,17 @@ def terms():
 def privacy():
   return webbrowser.open_new_tab("https://replit.com/site/privacy", code=302)  
 
+### LOGGING
+
+
 #if __name__ == "__main__":
 #  app.run(
 #    host='0.0.0.0', 
 #    port=8080, debug=True)
+
+@app.route('/logtest')
+def logtest():
+  wpisz_do_logu(datetime.datetime.now(),'INFO', 'Info wpis do logu')
+  wpisz_do_logu(datetime.datetime.now(),'WARNING', 'Warning wpis do logu')
+  wpisz_do_logu(datetime.datetime.now(),'CRITICAL', 'Critical wpis do logu')
+  return "Testowe linijki dodane do pliku mojlog.log"
