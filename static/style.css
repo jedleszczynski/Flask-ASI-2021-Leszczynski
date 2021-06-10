@@ -131,6 +131,8 @@ width: 50%;
   color: black;
 }
 
-#woda{
-  background-image: url("static/waves.jpg");
+#waves{
+  background-image: url('/static/waves.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

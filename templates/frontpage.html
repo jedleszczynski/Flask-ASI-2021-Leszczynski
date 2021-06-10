@@ -1,37 +1,42 @@
 <!doctype html>
 <html>
+<title>Flask-ASI-2021 Leszczynski</title> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-      <style>
-      a {
-        color: red;
-        padding-top: 150px;
-        font-size: 13px;
-      }
-  </style>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
-
-<body id="woda">
+<body id="waves">
   <br><br>
-  <center>
-     Witaj {{name}} :) Jesteś zaglogowany!
+  <center class="w-auto">
+    <div style="color: #ffffff; text-shadow: 3px 3px #6F7942;"" >
+     <h1> Witaj {{name}} :) Jesteś zaglogowany! </h1>
      <br>
-     Email: {{email}}
+     <h4>Email: {{email}} </h4>
      <br>
-     Pic: <img src="{{pic}}">
+     <h4>Pic: <img class="img-fluid" src="{{pic}}"> </h4>
       <br>
-    (Imie, mail i obrazek widoczne dla Google login)
+    <p>(Imie, mail i obrazek widoczne dla Google login)</p>
       <br>
-  
+  </div>
    <div>
       <a href='/pogoda'>
-          <input type="submit" value="Zobacz pogodę" class="btn btn-primary btn-large btn-block">
+          <input type="submit" value="Zobacz pogodę" class="btn-primary">
+      </a>
+            <a href='/logtest'>
+          <input type="submit" value="Testuj log" class="btn-primary">
+      </a>
+            <a href='/grades'>
+          <input type="submit" value="Oceny" class="btn-primary">
       </a>
   </div>
- <img src="/static/cutsie.gif" id="cutsie.gif">
+  <br>
+ <img  src="/static/cutsie.gif" id="cutsie.gif">
  <div id="logout">
       <a href='/wyloguj'>
-          <input type="submit" value="Log Out" class="btn btn-primary btn-large btn-block">
+          <input type="submit" value="Log Out" class="btn-lg btn">
       </a>
   </div>
 

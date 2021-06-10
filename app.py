@@ -250,13 +250,13 @@ def bootstrap():
 @app.route('/grades', methods=['GET'])
 def return_grades():
   #ponizszy kod aby dostepne bylo tylko dla zalogowanych
-  # if not session.get('logged_in'):
-    # return render_template('login.html')
-  # else:
+  #if not session.get('logged_in') or not current_user.is_authenticated:
+  #  return render_template('logowanie.html')
+  #else:
     sqlsession = return_sqlalchemysession()
     grades = sqlsession.query(Grade).all()
-    # for x in grades:
-      # print ({i.name: getattr(x, i.name) for i in x.__table__.columns})
+    for x in grades:
+      print ({i.name: getattr(x, i.name) for i in x.__table__.columns})
     return render_template("grades.html", grades=grades)
 
 ## Dodawanie nowych ocen (patrz na dol tabelki)
